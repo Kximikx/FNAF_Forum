@@ -268,7 +268,7 @@
     .login-button{
         padding: 10px;
         font-size: 0px;
-        width: 100%; /* Робить кнопку широкою */
+        width: 50%; /* Робить кнопку широкою */
     }
 
     .login-button .login-text {
