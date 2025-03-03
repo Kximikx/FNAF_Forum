@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNAF Фан Форум</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo-removebg-preview.png" type="logo-image">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark">
+    <div class="site-container">
+        <!-- Шапка сайту -->
+        <header class="site-header">
+            <div class="container header-container">
+                <div class="header-left">
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Відкрити меню">
+                        <i data-lucide="menu"></i>
+                    </button>
+                    <img href="/img/logo-removebg-preview.png" class="site-logo">
+                        <img src="/img/logo-removebg-preview.png" alt="FNAF Лого" class="logo-image">
+                        <span class="logo-text fnaf-shadow">FNAF Фан Форум</span>
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="search" placeholder="Пошук на форумі..." class="search-input">
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <button class="icon-button notification-button" aria-label="Сповіщення">
+                        <i data-lucide="bell"></i>
+                        <span class="notification-indicator"></span>
+                    </button>
+                    
+                    <button id="login-button" class="button login-button">
+                        <i data-lucide="log-in" aria-hidden="true"></i>
+                        <span>Увійти</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Мобільне меню -->
+        <div id="mobile-menu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="/" class="site-logo">
+                    <img src="img/logo-removebg-preview.png" alt="FNAF Лого" class="logo-image">
+                    <span class="logo-text fnaf-shadow">FNAF Форум</span>
+                </a>
+                <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Закрити меню">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <nav class="mobile-nav">
+                <a href="/" class="mobile-nav-item">
+                    <i data-lucide="home" aria-hidden="true"></i>
+                    Головна
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i data-lucide="message-square" aria-hidden="true"></i>
+                    Форуми
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i data-lucide="users" aria-hidden="true"></i>
+                    Спільнота
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i data-lucide="bookmark" aria-hidden="true"></i>
+                    Збережені пости
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i data-lucide="settings" aria-hidden="true"></i>
+                    Налаштування
+                </a>
+                <a href="#" class="mobile-nav-item">
+                    <i data-lucide="help-circle" aria-hidden="true"></i>
+                    Допомога і FAQ
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Основний контент -->
+        <main class="main-content">
+            <div class="container main-container">
+                <!-- Головна колонка -->
+                <div class="main-column">
+                    <!-- Секція героя -->
+                    <section class="hero-section">
+                        <div class="hero-content">
+                            <h1 class="hero-title glitch" data-text="Ласкаво просимо на FNAF Фан Форум!">
+                                Ласкаво просимо на FNAF Фан Форум!
+                            </h1>
+                            <p class="hero-description">
+                                Приєднуйтесь до нашої спільноти фанатів Five Nights at Freddy's, щоб обговорювати теорії, ділитися фан-артом та спілкуватися з іншими ентузіастами.
+                            </p>
+                            <div class="hero-buttons">
+                                <button class="button">Приєднатися зараз</button>
+                                <button class="button button-outline">Переглянути форуми</button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Категорії форуму -->
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">Категорії форуму</h2>
+                            <button class="button button-ghost button-sm">Переглянути всі</button>
+                        </div>
+                        <div class="category-grid">
+                            <div class="category-card">
+                                <div class="category-header">
+                                    <h3 class="category-title">Теорії гри</h3>
+                                    <span class="category-icon" aria-hidden="true">🎮</span>
+                                </div>
+                                <div class="category-footer">
+                                    <span class="category-posts">1243 постів</span>
+                                    <button class="button button-ghost button-sm">Переглянути</button>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-header">
+                                    <h3 class="category-title">Фан-арт</h3>
+                                    <span class="category-icon" aria-hidden="true">🎨</span>
+                                </div>
+                                <div class="category-footer">
+                                    <span class="category-posts">876 постів</span>
+                                    <button class="button button-ghost button-sm">Переглянути</button>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-header">
+                                    <h3 class="category-title">Механіка гри</h3>
+                                    <span class="category-icon" aria-hidden="true">⚙️</span>
+                                </div>
+                                <div class="category-footer">
+                                    <span class="category-posts">532 постів</span>
+                                    <button class="button button-ghost button-sm">Переглянути</button>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-header">
+                                    <h3 class="category-title">Обговорення сюжету</h3>
+                                    <span class="category-icon" aria-hidden="true">📚</span>
+                                </div>
+                                <div class="category-footer">
+                                    <span class="category-posts">1567 постів</span>
+                                    <button class="button button-ghost button-sm">Переглянути</button>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-header">
+                                    <h3 class="category-title">Аналіз персонажів</h3>
+                                    <span class="category-icon" aria-hidden="true">🔍</span>
+                                </div>
+                                <div class="category-footer">
+                                    <span class="category-posts">743 постів</span>
+                                    <button class="button button-ghost button-sm">Переглянути</button>
+                                </div>
+                            </div>
+                            <div class="category-card">
+                                <div class="category-header">
+                                    <h3 class="category-title">Меми та гумор</h3>
+                                    <span class="category-icon" aria-hidden="true">😂</span>
+                                </div>
+                                <div class="category-footer">
+                                    <span class="category-posts">921 постів</span>
+                                    <button class="button button-ghost button-sm">Переглянути</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Пости форуму -->
+                    <section class="section">
+                        <div class="tabs">
+                            <div class="tabs-header">
+                                <div class="tabs-list" role="tablist">
+                                    <button class="tab-trigger active" role="tab" aria-selected="true" aria-controls="latest-tab" data-tab="latest">Останні</button>
+                                    <button class="tab-trigger" role="tab" aria-selected="false" aria-controls="trending-tab" data-tab="trending">Популярні</button>
+                                </div>
+                                <button class="button button-outline button-sm">Новий пост</button>
+                            </div>
+                            
+                            <div class="tab-content active" id="latest-tab" role="tabpanel" aria-labelledby="latest-tab">
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">Ф</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Нові теорії про DLC FNAF Security Breach</a>
+                                                <span class="post-badge">24 відповіді</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від FreddyFan87</span>
+                                                <span class="meta-separator"></span>
+                                                <span>342 перегляди</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>2 години тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">Л</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Зв'язок між FNAF 4 та Sister Location</a>
+                                                <span class="post-badge">56 відповідей</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від LoreHunter</span>
+                                                <span class="meta-separator"></span>
+                                                <span>789 переглядів</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>5 годин тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">А</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Мій фан-арт Glamrock Freddy</a>
+                                                <span class="post-badge">31 відповідь</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від ArtisticSoul</span>
+                                                <span class="meta-separator"></span>
+                                                <span>412 переглядів</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>8 годин тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">У</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Як пройти режим 50/20 - Поради та хитрощі</a>
+                                                <span class="post-badge">19 відповідей</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від UltimateSurviver</span>
+                                                <span class="meta-separator"></span>
+                                                <span>267 переглядів</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>12 годин тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">Т</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Невідповідності в хронології всесвіту FNAF</a>
+                                                <span class="post-badge">87 відповідей</span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від TheoryMaster</span>
+                                                <span class="meta-separator"></span>
+                                                <span>1023 перегляди</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>1 день тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="button button-outline button-full">Завантажити ще</button>
+                            </div>
+                            
+                            <div class="tab-content" id="trending-tab" role="tabpanel" aria-labelledby="trending-tab">
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">М</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Офіційне обговорення фільму FNAF</a>
+                                                <span class="post-badge trending-badge">
+                                                    <i data-lucide="trending-up" class="badge-icon" aria-hidden="true"></i>
+                                                    Гаряче
+                                                </span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від MovieBuff</span>
+                                                <span class="meta-separator"></span>
+                                                <span>2345 переглядів</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>1 день тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">Ф</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Спекуляції щодо нового проекту Скотта Коутона</a>
+                                                <span class="post-badge trending-badge">
+                                                    <i data-lucide="trending-up" class="badge-icon" aria-hidden="true"></i>
+                                                    Гаряче
+                                                </span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від FNAFInsider</span>
+                                                <span class="meta-separator"></span>
+                                                <span>1876 переглядів</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>2 дні тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post-card">
+                                    <div class="post-content">
+                                        <div class="post-avatar">
+                                            <span class="avatar-text">Д</span>
+                                        </div>
+                                        <div class="post-details">
+                                            <div class="post-header">
+                                                <a href="#" class="post-title">Особистість Плачучої Дитини - Нові докази</a>
+                                                <span class="post-badge trending-badge">
+                                                    <i data-lucide="trending-up" class="badge-icon" aria-hidden="true"></i>
+                                                    Гаряче
+                                                </span>
+                                            </div>
+                                            <div class="post-meta">
+                                                <span>від DetectiveGamer</span>
+                                                <span class="meta-separator"></span>
+                                                <span>1543 перегляди</span>
+                                                <span class="meta-separator"></span>
+                                                <i data-lucide="clock" class="meta-icon" aria-hidden="true"></i>
+                                                <span>3 дні тому</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Вітрина аніматроніків -->
+                    <section class="section">
+                        <h2 class="section-title">Популярні аніматроніки</h2>
+                        <div class="animatronic-grid">
+                            <div class="animatronic-card">
+                                <div class="animatronic-image">
+                                    <img src="img/images.jpg" alt="Freddy Fazbear">
+                                </div>
+                                <div class="animatronic-info">
+                                    <h3 class="animatronic-name">Freddy Fazbear</h3>
+                                    <p class="animatronic-description">Головний антагоніст та талісман піцерії Freddy Fazbear's Pizza</p>
+                                </div>
+                            </div>
+                            <div class="animatronic-card">
+                                <div class="animatronic-image">
+                                    <img src="img/Bony.png" alt="Bonnie">
+                                </div>
+                                <div class="animatronic-info">
+                                    <h3 class="animatronic-name">Bonnie</h3>
+                                    <p class="animatronic-description">Гітарист гурту та постійний персонаж</p>
+                                </div>
+                            </div>
+                            <div class="animatronic-card">
+                                <div class="animatronic-image">
+                                    <img src="img/Chica.jpg" alt="Chica">
+                                </div>
+                                <div class="animatronic-info">
+                                    <h3 class="animatronic-name">Chica</h3>
+                                    <p class="animatronic-description">Бек-вокалістка, що тримає кекс на ім'я Mr. Cupcake</p>
+                                </div>
+                            </div>
+                            <div class="animatronic-card">
+                                <div class="animatronic-image">
+                                    <img src="img/Foxy.png" alt="Foxy">
+                                </div>
+                                <div class="animatronic-info">
+                                    <h3 class="animatronic-name">Foxy</h3>
+                                    <p class="animatronic-description">Аніматронік-пірат лис з Піратської бухти</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Бічна панель -->
+                <div class="sidebar">
+                    <!-- Пошук (мобільний) -->
+                    <div class="mobile-search">
+                        <div class="search-box">
+                            <i data-lucide="search" aria-hidden="true"></i>
+                            <input type="search" placeholder="Пошук на форумі..." class="search-input">
+                        </div>
+                    </div>
+                    
+                    <!-- Статистика спільноти -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header">
+                            <h3 class="sidebar-card-title">Статистика спільноти</h3>
+                        </div>
+                        <div class="sidebar-card-content">
+                            <div class="stats-list">
+                                <div class="stats-item">
+                                    <span class="stats-label">Учасники</span>
+                                    <span class="stats-value">12,345</span>
+                                </div>
+                                <div class="stats-item">
+                                    <span class="stats-label">Теми</span>
+                                    <span class="stats-value">5,678</span>
+                                </div>
+                                <div class="stats-item">
+                                    <span class="stats-label">Пости</span>
+                                    <span class="stats-value">98,765</span>
+                                </div>
+                                <div class="stats-item">
+                                    <span class="stats-label">Онлайн зараз</span>
+                                    <span class="stats-value online">432</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Топ контрибуторів -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header">
+                            <h3 class="sidebar-card-title">Топ контрибутори</h3>
+                        </div>
+                        <div class="sidebar-card-content">
+                            <div class="contributors-list">
+                                <div class="contributor-item">
+                                    <div class="contributor-avatar">
+                                        <span class="avatar-text">А</span>
+                                    </div>
+                                    <div class="contributor-info">
+                                        <p class="contributor-name">User1</p>
+                                        <p class="contributor-posts">900 постів</p>
+                                    </div>
+                                    <div class="contributor-badge">
+                                        <i data-lucide="star" class="badge-icon filled" aria-hidden="true"></i>
+                                        5
+                                    </div>
+                                </div>
+                                <div class="contributor-item">
+                                    <div class="contributor-avatar">
+                                        <span class="avatar-text">Б</span>
+                                    </div>
+                                    <div class="contributor-info">
+                                        <p class="contributor-name">User2</p>
+                                        <p class="contributor-posts">800 постів</p>
+                                    </div>
+                                    <div class="contributor-badge">
+                                        <i data-lucide="star" class="badge-icon filled" aria-hidden="true"></i>
+                                        4
+                                    </div>
+                                </div>
+                                <div class="contributor-item">
+                                    <div class="contributor-avatar">
+                                        <span class="avatar-text">В</span>
+                                    </div>
+                                    <div class="contributor-info">
+                                        <p class="contributor-name">User3</p>
+                                        <p class="contributor-posts">700 постів</p>
+                                    </div>
+                                    <div class="contributor-badge">
+                                        <i data-lucide="star" class="badge-icon filled" aria-hidden="true"></i>
+                                        3
+                                    </div>
+                                </div>
+                                <div class="contributor-item">
+                                    <div class="contributor-avatar">
+                                        <span class="avatar-text">Г</span>
+                                    </div>
+                                    <div class="contributor-info">
+                                        <p class="contributor-name">User4</p>
+                                        <p class="contributor-posts">600 постів</p>
+                                    </div>
+                                    <div class="contributor-badge">
+                                        <i data-lucide="star" class="badge-icon filled" aria-hidden="true"></i>
+                                        2
+                                    </div>
+                                </div>
+                                <div class="contributor-item">
+                                    <div class="contributor-avatar">
+                                        <span class="avatar-text">Д</span>
+                                    </div>
+                                    <div class="contributor-info">
+                                        <p class="contributor-name">User5</p>
+                                        <p class="contributor-posts">500 постів</p>
+                                    </div>
+                                    <div class="contributor-badge">
+                                        <i data-lucide="star" class="badge-icon filled" aria-hidden="true"></i>
+                                        1
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Нещодавня активність -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header">
+                            <h3 class="sidebar-card-title">Нещодавня активність</h3>
+                        </div>
+                        <div class="sidebar-card-content">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <div class="activity-header">
+                                        <div class="activity-avatar">
+                                            <span class="avatar-text">А</span>
+                                        </div>
+                                        <span class="activity-user">User1</span>
+                                        <span class="activity-time">1хв тому</span>
+                                    </div>
+                                    <p class="activity-action">
+                                        Опублікував у <a href="#" class="activity-link">Теорії FNAF</a>
+                                    </p>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-header">
+                                        <div class="activity-avatar">
+                                            <span class="avatar-text">Б</span>
+                                        </div>
+                                        <span class="activity-user">User2</span>
+                                        <span class="activity-time">2хв тому</span>
+                                    </div>
+                                    <p class="activity-action">
+                                        Відповів у <a href="#" class="activity-link">Галерея фан-арту</a>
+                                    </p>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-header">
+                                        <div class="activity-avatar">
+                                            <span class="avatar-text">В</span>
+                                        </div>
+                                        <span class="activity-user">User3</span>
+                                        <span class="activity-time">3хв тому</span>
+                                    </div>
+                                    <p class="activity-action">
+                                        Вподобав <a href="#" class="activity-link">Теорії FNAF</a>
+                                    </p>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-header">
+                                        <div class="activity-avatar">
+                                            <span class="avatar-text">Г</span>
+                                        </div>
+                                        <span class="activity-user">User4</span>
+                                        <span class="activity-time">4хв тому</span>
+                                    </div>
+                                    <p class="activity-action">
+                                        Опублікував у <a href="#" class="activity-link">Галерея фан-арту</a>
+                                    </p>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-header">
+                                        <div class="activity-avatar">
+                                            <span class="avatar-text">Д</span>
+                                        </div>
+                                        <span class="activity-user">User5</span>
+                                        <span class="activity-time">5хв тому</span>
+                                    </div>
+                                    <p class="activity-action">
+                                        Відповів у <a href="#" class="activity-link">Теорії FNAF</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Майбутні події -->
+                    <div class="sidebar-card">
+                        <div class="sidebar-card-header">
+                            <h3 class="sidebar-card-title">Майбутні події</h3>
+                        </div>
+                        <div class="sidebar-card-content">
+                            <div class="events-list">
+                                <div class="event-item">
+                                    <div class="event-title">Конкурс FNAF арту</div>
+                                    <div class="event-time">Починається через 3 дні</div>
+                                </div>
+                                <div class="event-item">
+                                    <div class="event-title">Ігрова ніч спільноти</div>
+                                    <div class="event-time">Наступна п'ятниця, 20:00 за Києвом</div>
+                                </div>
+                                <button class="button button-outline button-sm button-full">Переглянути всі події</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Підвал -->
+        <footer class="site-footer">
+            <div class="container footer-container">
+                <p class="footer-copyright">
+                    &copy; <span id="current-year"></span> FNAF Фан Форум. Це фанатський сайт і не пов'язаний зі Скоттом Коутоном або Steel Wool Studios.
+                </p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Умови користування</a>
+                    <a href="#" class="footer-link">Конфіденційність</a>
+                    <a href="#" class="footer-link">Контакти</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
