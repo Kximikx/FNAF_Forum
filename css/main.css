@@ -250,6 +250,35 @@
   .login-button {
     gap: 0.25rem;
   }
+  @media (max-width: 480px) {
+    .button {
+      padding: 10px;
+      font-size: 14px;
+      width: 100%; /* Робить кнопку широкою */
+  }
+
+  .login-text {
+      display: none; /* Ховає текст на дуже малих екранах */
+  }
+
+  .button i {
+      font-size: 20px; /* Збільшує значок для кращої видимості */
+  }
+}
+    .login-button{
+        padding: 10px;
+        font-size: 0px;
+        width: 100%; /* Робить кнопку широкою */
+    }
+
+    .login-button .login-text {
+        display: none; /* Ховає текст на дуже малих екранах */
+    }
+
+    .login-button i {
+        font-size: 20px; /* Збільшує значок для кращої видимості */
+    }
+}
   
   /* Mobile menu */
   .mobile-menu-toggle {
